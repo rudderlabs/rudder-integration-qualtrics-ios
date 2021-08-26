@@ -69,4 +69,9 @@
 - (void)reset {
     [RSLogger logDebug:@"Qualtrics Factory doesn't support Reset Call"];
 }
+
+- (void)flush {
+    [RSLogger logDebug:@"Qualtrics Factory doesn't support Flush Call"];
+}
+
 @end

@@ -33,9 +33,9 @@
 - (IBAction)intercept_Call:(id)sender {
     [Qualtrics.shared evaluateProjectWithCompletion:^(NSDictionary<NSString *,TargetingResult *>* targetingResults){
        for (NSString* interceptID in targetingResults) {
-           TargetingResult *result = targetingResults[interceptID];]
+           TargetingResult *result = targetingResults[interceptID];
            if ([result passed]) {
-               [[Qualtrics shared] displayWithViewController:self autoCloseSurvey:NO];
+               [[Qualtrics shared] displayWithViewController:self autoCloseSurvey:@NO];
            }
        }
    }];

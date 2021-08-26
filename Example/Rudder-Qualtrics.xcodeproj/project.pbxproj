@@ -71,10 +71,6 @@
 		CE939881D2B6EDBFDF6492C4 /* Pods-Rudder-Qualtrics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Qualtrics_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Qualtrics_Tests/Pods-Rudder-Qualtrics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D52D83BBFC3FDD8EFB8E2AF1 /* Pods-Rudder-Qualtrics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Qualtrics_Tests.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Qualtrics_Tests/Pods-Rudder-Qualtrics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F2EFD74C388DE3FE8CEACCF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F6BBD03F26AAA30800398B07 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6BBD04126AAA32400398B07 /* FBSDKCoreKit_Basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit_Basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6BBD04326AAA35300398B07 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6BBD04526AAA35900398B07 /* FBSDKCoreKit_Basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit_Basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +123,6 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6BBD04526AAA35900398B07 /* FBSDKCoreKit_Basics.framework */,
-				F6BBD04326AAA35300398B07 /* FBSDKCoreKit.framework */,
-				F6BBD04126AAA32400398B07 /* FBSDKCoreKit_Basics.framework */,
-				F6BBD03F26AAA30800398B07 /* FBSDKCoreKit.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -323,11 +315,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Rudder-Qualtrics_Example/Pods-Rudder-Qualtrics_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Rudder/Rudder.framework",
 				"${BUILT_PRODUCTS_DIR}/Rudder-Qualtrics/Rudder_Qualtrics.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Qualtrics/Qualtrics.framework/Qualtrics",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rudder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rudder_Qualtrics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qualtrics.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

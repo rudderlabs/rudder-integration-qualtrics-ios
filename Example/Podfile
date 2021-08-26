@@ -1,13 +1,12 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'Rudder-Qualtrics_Example' do
   pod 'Rudder-Qualtrics', :path => '../'
-  
+
   target 'Rudder-Qualtrics_Tests' do
     inherit! :search_paths
-
-#    pod 'FBSnapshotTestCase'
+    
   end
 end

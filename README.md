@@ -6,7 +6,7 @@ More information on RudderStack can be found [here](https://github.com/rudderlab
 
 ## Integrating Qualtrics with RudderStack's iOS SDK
 
-1. Add [Qualtrics](http://Qualtrics.google.com) as a destination in the [Dashboard](https://app.rudderstack.com/).
+1. Add [Qualtrics](https://www.qualtrics.com/) as a destination in the [Dashboard](https://app.rudderstack.com/).
 
 2. Rudder-Qualtrics is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile and followed by `pod install`:
 

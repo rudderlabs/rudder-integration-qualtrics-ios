@@ -16,18 +16,27 @@
 {
     // Override point for customization after application launch.
     
-    NSString *writeKey = @"1vqBRSLN79i8T7Mcl6zzRsWqdO8";
-    NSString *dataPlaneUrl = @"https://285b83208a68.ngrok.io";
+    NSString *writeKey = @"1uvpRh0L8UoZj2HKHXE5A6E0RVx";
+    NSString *dataPlaneUrl = @"https://a6516bec708b.ngrok.io";
 
   
     RSConfigBuilder *configBuilder = [[RSConfigBuilder alloc] init];
     [configBuilder withDataPlaneUrl:dataPlaneUrl];
-    [configBuilder withLoglevel:RSLogLevelVerbose];
-    [configBuilder withControlPlaneUrl:@"https://chilly-seahorse-73.loca.lt"];
+    [configBuilder withLoglevel:RSLogLevelNone];
+    [configBuilder withControlPlaneUrl:@"https://e91d300db7e0.ngrok.io"];
     [configBuilder withFactory:[RudderQualtricsFactory instance]];
     RSClient *rudderClient = [RSClient getInstance:writeKey config:[configBuilder build]];
     
     return YES;
+}
+
++ (void) identify:(NSString *) properties withKey:(NSString *)key{
+    [[RSClient sharedInstance] reset];
+    NSMutableDictionary *traits2 = [[NSMutableDictionary alloc] init];
+    [traits2 setObject:properties forKey:key];
+    [[RSClient sharedInstance] identify:@"test_user_id"
+                                 traits: traits2
+    ];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

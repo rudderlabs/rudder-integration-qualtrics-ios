@@ -1,8 +1,8 @@
-//
 //  RudderQualtricsFactory.m
-//  FBSnapshotTestCase
+//  Pods-Rudder-Qualtrics
 //
 //  Created by Abhishek Pandey on 15/11/19.
+//  Copyright (c) 2021 Abhishek Pandey. All rights reserved.
 //
 
 #import "RudderQualtricsFactory.h"

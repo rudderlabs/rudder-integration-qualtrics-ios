@@ -10,10 +10,11 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/rudderlabs/rudder-integration-qualtrics-ios'
     s.license          = { :type => "Apache", :file => "LICENSE" }
     s.author           = { 'Rudderlabs' => 'arnab@rudderlabs.com' }
-    s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-qualtrics-ios.git', :tag => 'v1.0.1' }
-    s.platform         = :ios, "9.0"
+    s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-qualtrics-ios.git', :tag => 'v1.0.0' }
+    s.platform         = :ios, "11.0"
 
     s.source_files = 'Rudder-Qualtrics/Classes/**/*'
 
     s.dependency 'Rudder'
+    s.dependency 'Qualtrics', '2.0.0'
 end

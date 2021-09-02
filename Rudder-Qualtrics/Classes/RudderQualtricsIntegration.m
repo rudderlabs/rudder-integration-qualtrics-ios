@@ -38,9 +38,17 @@
     NSString *type = message.type;
         if ([type isEqualToString:@"identify"])
         {
-            NSMutableDictionary<NSString*, NSObject*>* traits = [message.context.traits mutableCopy];
+            NSMutableDictionary* traits = [message.context.traits mutableCopy];
             for (NSString *key in traits) {
-                [self.qualtrics.properties setStringWithString:[NSString stringWithFormat:@"%@", traits[key]]  for:key];
+                if ([traits[key] isKindOfClass:[NSString class]]) {
+                    [self.qualtrics.properties setStringWithString:[NSString stringWithFormat:@"%@", traits[key]]  for:key];
+                }
+                else if ([[traits objectForKey:key] isKindOfClass:[NSNumber class]] ) {
+                    [self.qualtrics.properties setNumberWithNumber:[traits[key] doubleValue]  for:key];
+                }
+                else {
+                    [RSLogger logDebug:[NSString stringWithFormat:@"%@ whose value is: %@ is not supported, as it is not of type String or Number.]", key, traits[key]]];
+                }
             }
         }
         else

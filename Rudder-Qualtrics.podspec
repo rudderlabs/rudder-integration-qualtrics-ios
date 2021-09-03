@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.platform         = :ios, "11.0"
 
     s.source_files = 'Rudder-Qualtrics/Classes/**/*'
-
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     s.dependency 'Rudder'
     s.dependency 'Qualtrics', '2.0.0'
 end

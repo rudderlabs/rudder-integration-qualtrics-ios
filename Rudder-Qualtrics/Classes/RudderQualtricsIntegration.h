@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import <Rudder/Rudder.h>
-@import Qualtrics;
 
 
 
@@ -17,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSString *brandId;
 @property (nonatomic) NSString *projectId;
-@property (nonatomic, strong, nullable) Qualtrics *qualtrics;
 
 - (instancetype)initWithConfig:(NSDictionary *)config withAnalytics:(RSClient *)client;
 

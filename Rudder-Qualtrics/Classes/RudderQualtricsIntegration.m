@@ -25,10 +25,9 @@
                 [RSLogger logError:@"Invalid Qualtrics Account Credentials, Aborting"];
                 return;
             }
-            self.qualtrics  = Qualtrics.shared;
             self.brandId = [config objectForKey:@"brandId"];
             self.projectId = [config objectForKey:@"projectId"];
-            [self.qualtrics initializeProjectWithBrandId:self.brandId projectId:self.projectId completion:nil];
+            [[Qualtrics shared] initializeProjectWithBrandId:self.brandId projectId:self.projectId completion:nil];
         });
     }
     return self;
@@ -41,10 +40,10 @@
             NSMutableDictionary* traits = [message.context.traits mutableCopy];
             for (NSString *key in traits) {
                 if ([traits[key] isKindOfClass:[NSString class]]) {
-                    [self.qualtrics.properties setStringWithString:[NSString stringWithFormat:@"%@", traits[key]]  for:key];
+                    [[[Qualtrics shared] properties] setStringWithString:[NSString stringWithFormat:@"%@", traits[key]]  for:key];
                 }
                 else if ([[traits objectForKey:key] isKindOfClass:[NSNumber class]] ) {
-                    [self.qualtrics.properties setNumberWithNumber:[traits[key] doubleValue]  for:key];
+                    [[[Qualtrics shared] properties] setNumberWithNumber:[traits[key] doubleValue]  for:key];
                 }
                 else {
                     [RSLogger logDebug:[NSString stringWithFormat:@"%@ whose value is: %@ is not supported, as it is not of type String or Number.]", key, traits[key]]];

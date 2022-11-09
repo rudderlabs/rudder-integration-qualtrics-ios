@@ -1,0 +1,27 @@
+PODS:
+  - Qualtrics (2.0.0)
+  - Rudder (1.0.21)
+  - Rudder-Qualtrics (1.0.0):
+    - Qualtrics (= 2.0.0)
+    - Rudder
+
+DEPENDENCIES:
+  - Rudder-Qualtrics (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Qualtrics
+    - Rudder
+
+EXTERNAL SOURCES:
+  Rudder-Qualtrics:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Qualtrics: b5670b44bc009b7f8bc1c6e8d1248fb1aff38a02
+  Rudder: 776214c69c8c21ce33e9cb0b6da37883edc9c77d
+  Rudder-Qualtrics: afcbf3f9dec26fdd05c4fe69e8e14db751c7e413
+
+PODFILE CHECKSUM: 8677e74c872d8023b77ba1ad1ea8c6f2572b0f69
+
+COCOAPODS: 1.10.1
